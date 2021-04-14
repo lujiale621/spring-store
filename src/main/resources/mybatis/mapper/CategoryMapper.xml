@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN "
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="src.store.mapper.CategoryMapper">
+    <select id="getCategorylById" resultType="src.store.bean.Carousel">
+        SELECT * from category where category_id = #{category_id}
+    </select>
+    <insert id="insertCategory" parameterType="src.store.bean.Carousel" >
+        insert into category values(#{category_id},#{category_name})
+    </insert>
+    <delete id="deletCategoryById" >
+        delete from category where category_id = #{category_id}
+    </delete>
+</mapper>

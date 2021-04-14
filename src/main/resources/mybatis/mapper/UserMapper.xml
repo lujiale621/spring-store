@@ -26,4 +26,7 @@
         </if>
         where id = #{id}
     </update>
+    <select id="getCarouselById" resultType="src.store.bean.Carousel">
+        SELECT * from category where carousel_id = #{carousel_id}
+    </select>
 </mapper>
