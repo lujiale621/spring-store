@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN "
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="src.store.mapper.UserMapper">
+    <select id="getUserBykey" resultType="src.store.bean.User">
+        SELECT * from users where userName = #{username} and password = #{password}
+    </select>
+    <select id="getUserByName" resultType="src.store.bean.User">
+        select * from users where userName = #{username}
+    </select>
+    <insert id="insertUser" parameterType="src.store.bean.User" >
+        insert into users values(null,#{username},#{password},null)
+    </insert>
+    <delete id="deleteUserByid" >
+        delete from users where user_id = #{user_id}
+    </delete>
+    <delete id="deleteUserByUser" parameterType="src.store.bean.User">
+        delete from users where  userName= #{username} and password=#{password}
+    </delete>
+    <update id="updataUser" parameterType="src.store.bean.User" >
+        update users
+        set userName=#{username}, password=#{password}
+        <if test="phonenumber != null">
+            userPhoneNumber = #{userphonenumber},
+        </if>
+        where id = #{id}
+    </update>
+</mapper>
