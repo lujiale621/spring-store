@@ -10,6 +10,7 @@ import src.store.mapper.UserMapper;
 
 @RestController
 public class SqlController {
+    /*用户*/
     @Autowired
     UserMapper userMapper;
 
