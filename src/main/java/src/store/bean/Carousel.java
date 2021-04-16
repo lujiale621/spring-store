@@ -28,4 +28,13 @@ public class Carousel {
     public void setDescribes(String describes) {
         this.describes = describes;
     }
+
+    @Override
+    public String toString() {
+        return "Carousel{" +
+                "carousel_id=" + carousel_id +
+                ", imgPath='" + imgPath + '\'' +
+                ", describes='" + describes + '\'' +
+                '}';
+    }
 }

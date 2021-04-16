@@ -1,9 +1,8 @@
 package src.store.mapper;
-
-import src.store.bean.Category;
 import src.store.bean.Collect;
 
 public interface CollectMapper {
+
     Collect getCollect();
     Collect getCollectById(int user_id);
     void insertCollect(Collect collect);

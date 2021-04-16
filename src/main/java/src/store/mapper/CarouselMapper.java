@@ -1,5 +1,6 @@
 package src.store.mapper;
 
+
 import src.store.bean.Carousel;
 
 public interface CarouselMapper {

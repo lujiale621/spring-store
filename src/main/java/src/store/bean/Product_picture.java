@@ -40,7 +40,7 @@ public class Product_picture {
 
     @Override
     public String toString() {
-        return "product_picture{" +
+        return "Product_picture{" +
                 "id=" + id +
                 ", product_id=" + product_id +
                 ", product_picture='" + product_picture + '\'' +

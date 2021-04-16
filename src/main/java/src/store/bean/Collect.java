@@ -37,4 +37,14 @@ public class Collect {
     public void setCollect_time(int collect_time) {
         this.collect_time = collect_time;
     }
+
+    @Override
+    public String toString() {
+        return "Collect{" +
+                "id=" + id +
+                ", user_id=" + user_id +
+                ", product_id=" + product_id +
+                ", collect_time=" + collect_time +
+                '}';
+    }
 }

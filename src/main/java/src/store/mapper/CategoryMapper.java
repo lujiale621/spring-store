@@ -1,6 +1,6 @@
 package src.store.mapper;
 
-import src.store.bean.Carousel;
+
 import src.store.bean.Category;
 
 public interface CategoryMapper {
