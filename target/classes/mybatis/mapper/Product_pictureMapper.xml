@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN "
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="src.store.mapper.Product_pictureMapper">
+    <select id="getProduct_pictureByid" resultType="src.store.bean.Product_picture">
+        SELECT * from product_picture where product_id = #{product_id}
+    </select>
+
+    <insert id="insertProduct_picture" parameterType="src.store.bean.Product_picture" >
+        insert into product_picture values(#{id},#{product_id},#{product_picture},#{intro})
+    </insert>
+    <delete id="deletProduct_pictureById" >
+        delete from product_picture where product_id = #{product_id} and product_picture=#{product_picture}
+    </delete>
+</mapper>

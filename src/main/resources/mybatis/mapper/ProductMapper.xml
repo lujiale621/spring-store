@@ -6,8 +6,14 @@
     <select id="getProductByid" resultType="src.store.bean.Product">
         SELECT * from product where product_id = #{product_id}
     </select>
+    <select id="getAllProduct" resultType="src.store.bean.Product">
+        SELECT * from product
+    </select>
+    <select id="getProductByCateId" resultType="src.store.bean.Product">
+        SELECT * from product where category_id = #{category_id}
+    </select>
     <insert id="insertProduct" parameterType="src.store.bean.Product" >
-        insert into product values(#{product_id},#{product_name},#{category_id},#{product_title},#{product_intro})
+        insert into product values(#{product_id},#{product_name},#{category_id},#{product_title},#{product_intro},#{product_picture},#{product_price},${product_selling_price},#{product_num},#{product_sales})
     </insert>
     <delete id="deletProductById" >
         delete from product where product_id = #{product_id}

@@ -10,6 +10,6 @@
         insert into shoppingCart values(#{id},#{user_id},#{product_id},#{num})
     </insert>
     <delete id="deletShoppingCartById" >
-        delete from shoppingCart where product_id = #{product_id}
+        delete from shoppingCart where user_id=#{user_id} and product_id = #{product_id}
     </delete>
 </mapper>

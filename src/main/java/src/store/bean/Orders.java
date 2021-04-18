@@ -2,12 +2,12 @@ package src.store.bean;
 
 public class Orders {
     private int id;
-    private int order_id;
+    private long order_id;
     private int user_id;
     private int product_id;
     private int product_num;
     private double product_price;
-    private int order_time;
+    private long order_time;
 
     public int getId() {
         return id;
@@ -17,11 +17,11 @@ public class Orders {
         this.id = id;
     }
 
-    public int getOrder_id() {
+    public long getOrder_id() {
         return order_id;
     }
 
-    public void setOrder_id(int order_id) {
+    public void setOrder_id(long order_id) {
         this.order_id = order_id;
     }
 
@@ -57,11 +57,11 @@ public class Orders {
         this.product_price = product_price;
     }
 
-    public int getOrder_time() {
+    public long getOrder_time() {
         return order_time;
     }
 
-    public void setOrder_time(int order_time) {
+    public void setOrder_time(long order_time) {
         this.order_time = order_time;
     }
 }

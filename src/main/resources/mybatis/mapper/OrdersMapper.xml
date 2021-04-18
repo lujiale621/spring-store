@@ -10,6 +10,6 @@
         insert into orders values(#{id},#{order_id},#{user_id},#{product_id},#{product_num},#{product_price},#{order_time})
     </insert>
     <delete id="deletOrdersById" >
-        delete from orders where order_id = #{order_id}
+        delete from orders where user_id=#{user_id} and order_id = #{order_id}
     </delete>
 </mapper>
