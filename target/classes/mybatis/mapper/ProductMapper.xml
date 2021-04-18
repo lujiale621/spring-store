@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN "
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="src.store.mapper.ProductMapper">
+    <select id="getProductByid" resultType="src.store.bean.Product">
+        SELECT * from product where product_id = #{product_id}
+    </select>
+    <insert id="insertProduct" parameterType="src.store.bean.Product" >
+        insert into product values(#{product_id},#{product_name},#{category_id},#{product_title},#{product_intro})
+    </insert>
+    <delete id="deletProductById" >
+        delete from product where product_id = #{product_id}
+    </delete>
+</mapper>

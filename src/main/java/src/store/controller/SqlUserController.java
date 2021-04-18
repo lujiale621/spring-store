@@ -9,7 +9,7 @@ import src.store.bean.User;
 import src.store.mapper.UserMapper;
 
 @RestController
-public class SqlController {
+public class SqlUserController {
     /*用户*/
     @Autowired
     UserMapper userMapper;

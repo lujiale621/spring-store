@@ -4,7 +4,7 @@ public class Collect {
     private int id;
     private int user_id;
     private int product_id;
-    private int collect_time;
+    private long collect_time;
 
     public int getId() {
         return id;
@@ -30,11 +30,11 @@ public class Collect {
         this.product_id = product_id;
     }
 
-    public int getCollect_time() {
+    public long getCollect_time() {
         return collect_time;
     }
 
-    public void setCollect_time(int collect_time) {
+    public void setCollect_time(long collect_time) {
         this.collect_time = collect_time;
     }
 

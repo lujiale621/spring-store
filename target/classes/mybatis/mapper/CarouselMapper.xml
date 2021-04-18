@@ -7,7 +7,7 @@
         SELECT * from carousel where carousel_id = #{carousel_id}
     </select>
     <insert id="insertCarousel" parameterType="src.store.bean.Carousel" >
-        insert into carousel values(#{carousel_id},#{imgPath},#{describes},null)
+        insert into carousel values(#{carousel_id},#{imgPath},#{describes})
     </insert>
     <delete id="deletCarouselById" >
         delete from carousel where carousel_id = #{carousel_id}
