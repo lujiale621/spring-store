@@ -1,5 +1,6 @@
 package src.store.controller;
 
+import io.swagger.annotations.Api;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -9,6 +10,7 @@ import src.store.bean.Carousel;
 
 import src.store.mapper.CarouselMapper;
 /*maybe this is not need*/
+@Api(description = "商品目录接口")
 @RestController()
 public class SqlCarouselController {
     @Autowired

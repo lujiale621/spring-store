@@ -1,5 +1,6 @@
 package src.store.controller;
 
+import io.swagger.annotations.Api;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -7,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import src.store.bean.Product;
 import src.store.mapper.ProductMapper;
-
+@Api(description = "参品页面接口")
 @RestController
 public class SqlProductController {
    @Autowired
