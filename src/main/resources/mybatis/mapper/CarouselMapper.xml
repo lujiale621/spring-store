@@ -6,6 +6,9 @@
     <select id="getCarouselById" resultType="src.store.bean.Carousel">
         SELECT * from carousel where carousel_id = #{carousel_id}
     </select>
+    <select id="getCarousel" resultType="src.store.bean.Carousel">
+        SELECT * from carousel
+    </select>
     <insert id="insertCarousel" parameterType="src.store.bean.Carousel" >
         insert into carousel values(#{carousel_id},#{imgPath},#{describes})
     </insert>

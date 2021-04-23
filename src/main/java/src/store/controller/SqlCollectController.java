@@ -15,12 +15,16 @@ public class SqlCollectController {
     CollectMapper collectMapper;
 
     @RequestMapping(value = "/collect/getallcollect",method = RequestMethod.GET,produces = "application/json;charset=UTF-8")
-    public Collect CollectOptSearchAll(){
+    public Collect[] CollectOptSearchAll(){
        return collectMapper.getCollect();
     }
     @RequestMapping(value = "/collect/getcollectbyid",method = RequestMethod.GET,produces = "application/json;charset=UTF-8")
-    public Collect CollectOptSearchById(@Param("user_id")int user_id){
+    public Collect[] CollectOptSearchById(@Param("user_id")int user_id){
         return collectMapper.getCollectById(user_id);
+    }
+    @RequestMapping(value = "/collect/getcollectbykey",method = RequestMethod.GET,produces = "application/json;charset=UTF-8")
+    public Collect[] CollectOptSearchByKey(@Param("user_id")int user_id,@Param("product_id")int product_id){
+        return collectMapper.getCollectByKey(user_id,product_id);
     }
     @RequestMapping(value = "/collect/insertcollect",method = RequestMethod.GET,produces = "application/json;charset=UTF-8")
     public void CollectOptInsert(@Param("user_id")int user_id,@Param("product_id")int product_id,@Param("collect_time")long collect_time){

@@ -6,10 +6,18 @@
     <select id="getShoppingCartByid" resultType="src.store.bean.ShoppingCart">
         SELECT * from shoppingCart where user_id = #{user_id}
     </select>
+    <select id="getShoppingCartByKey" resultType="src.store.bean.ShoppingCart">
+        SELECT * from shoppingCart where user_id = #{user_id} and product_id = #{product_id}
+    </select>
     <insert id="insertShoppingCart" parameterType="src.store.bean.ShoppingCart" >
         insert into shoppingCart values(#{id},#{user_id},#{product_id},#{num})
     </insert>
     <delete id="deletShoppingCartById" >
         delete from shoppingCart where user_id=#{user_id} and product_id = #{product_id}
     </delete>
+    <update id="updataShoppingCart" parameterType="src.store.bean.ShoppingCart" >
+        update shoppingCart
+        set num=#{num}
+        where user_id = #{user_id} and product_id =#{product_id}
+    </update>
 </mapper>

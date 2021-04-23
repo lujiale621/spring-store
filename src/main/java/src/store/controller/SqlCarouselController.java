@@ -20,6 +20,10 @@ public class SqlCarouselController {
     public Carousel CarOptSearchById(@Param("carousel_id")int carousel_id){
         return carouselmapper.getCarouselById(carousel_id);
     }
+    @RequestMapping(value = "/carousel/getcarousel",method = RequestMethod.GET,produces = "application/json;charset=UTF-8")
+    public Carousel[] CarOptSearch(){
+        return carouselmapper.getCarousel();
+    }
     @RequestMapping(value = "/carousel/insertcarousel",method = RequestMethod.GET,produces = "application/json;charset=UTF-8")
     public void CarOptInsert(@Param("carousel_id")int carousel_id,@Param("imgPath") String imgPath,@Param("describes")String describes){
         Carousel carousel = new Carousel();
