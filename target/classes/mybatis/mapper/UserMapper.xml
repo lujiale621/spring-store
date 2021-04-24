@@ -2,26 +2,29 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN "
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="src.store.mapper.UserMapper">
-    <select id="getUserId" resultType="src.store.bean.User">
+<mapper namespace="org.store.mapper.UserMapper">
+    <select id="getUserId" resultType="org.store.bean.User">
         SELECT * from users  where user_id = #{user_id}
     </select>
-    <select id="getUserBykey" resultType="src.store.bean.User">
+    <select id="getUser" resultType="org.store.bean.User">
+        SELECT * from users
+    </select>
+    <select id="getUserBykey" resultType="org.store.bean.User">
         SELECT * from users where userName = #{username} and password = #{password}
     </select>
-    <select id="getUserByName" resultType="src.store.bean.User">
+    <select id="getUserByName" resultType="org.store.bean.User">
         select * from users where userName = #{username}
     </select>
-    <insert id="insertUser" parameterType="src.store.bean.User" >
+    <insert id="insertUser" parameterType="org.store.bean.User" >
         insert into users values(null,#{username},#{password},null)
     </insert>
     <delete id="deleteUserByid" >
         delete from users where user_id = #{user_id}
     </delete>
-    <delete id="deleteUserByUser" parameterType="src.store.bean.User">
+    <delete id="deleteUserByUser" parameterType="org.store.bean.User">
         delete from users where  userName= #{username} and password=#{password}
     </delete>
-    <update id="updataUser" parameterType="src.store.bean.User" >
+    <update id="updataUser" parameterType="org.store.bean.User" >
         update users
         set userName=#{username}, password=#{password}
         <if test="phonenumber != null">
@@ -29,7 +32,7 @@
         </if>
         where id = #{id}
     </update>
-    <select id="getCarouselById" resultType="src.store.bean.Carousel">
+    <select id="getCarouselById" resultType="org.store.bean.Carousel">
         SELECT * from category where carousel_id = #{carousel_id}
     </select>
 </mapper>

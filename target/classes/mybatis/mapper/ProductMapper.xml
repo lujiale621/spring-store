@@ -2,17 +2,17 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN "
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="src.store.mapper.ProductMapper">
-    <select id="getProductByid" resultType="src.store.bean.Product">
+<mapper namespace="org.store.mapper.ProductMapper">
+    <select id="getProductByid" resultType="org.store.bean.Product">
         SELECT * from product where product_id = #{product_id}
     </select>
-    <select id="getAllProduct" resultType="src.store.bean.Product">
+    <select id="getAllProduct" resultType="org.store.bean.Product">
         SELECT * from product
     </select>
-    <select id="getProductByCateId" resultType="src.store.bean.Product">
+    <select id="getProductByCateId" resultType="org.store.bean.Product">
         SELECT * from product where category_id = #{category_id}
     </select>
-    <insert id="insertProduct" parameterType="src.store.bean.Product" >
+    <insert id="insertProduct" parameterType="org.store.bean.Product" >
         insert into product values(#{product_id},#{product_name},#{category_id},#{product_title},#{product_intro},#{product_picture},#{product_price},${product_selling_price},#{product_num},#{product_sales})
     </insert>
     <delete id="deletProductById" >

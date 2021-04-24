@@ -29,7 +29,7 @@ spring:
       useGlobalDataSourceStat: true # 合并多个DruidDataSource的监控数据
 
 server:
-  port: 8080
+  port: 8050
 mybatis:
   config-location: classpath:mybatis/mybatis-config.xml
   mapper-locations: classpath:mybatis/mapper/*.xml

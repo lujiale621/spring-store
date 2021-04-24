@@ -2,20 +2,20 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN "
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="src.store.mapper.ShoppingCartMapper">
-    <select id="getShoppingCartByid" resultType="src.store.bean.ShoppingCart">
+<mapper namespace="org.store.mapper.ShoppingCartMapper">
+    <select id="getShoppingCartByid" resultType="org.store.bean.ShoppingCart">
         SELECT * from shoppingCart where user_id = #{user_id}
     </select>
-    <select id="getShoppingCartByKey" resultType="src.store.bean.ShoppingCart">
+    <select id="getShoppingCartByKey" resultType="org.store.bean.ShoppingCart">
         SELECT * from shoppingCart where user_id = #{user_id} and product_id = #{product_id}
     </select>
-    <insert id="insertShoppingCart" parameterType="src.store.bean.ShoppingCart" >
+    <insert id="insertShoppingCart" parameterType="org.store.bean.ShoppingCart" >
         insert into shoppingCart values(#{id},#{user_id},#{product_id},#{num})
     </insert>
     <delete id="deletShoppingCartById" >
         delete from shoppingCart where user_id=#{user_id} and product_id = #{product_id}
     </delete>
-    <update id="updataShoppingCart" parameterType="src.store.bean.ShoppingCart" >
+    <update id="updataShoppingCart" parameterType="org.store.bean.ShoppingCart" >
         update shoppingCart
         set num=#{num}
         where user_id = #{user_id} and product_id =#{product_id}

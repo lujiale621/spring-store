@@ -2,14 +2,14 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN "
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="src.store.mapper.CarouselMapper">
-    <select id="getCarouselById" resultType="src.store.bean.Carousel">
+<mapper namespace="org.store.mapper.CarouselMapper">
+    <select id="getCarouselById" resultType="org.store.bean.Carousel">
         SELECT * from carousel where carousel_id = #{carousel_id}
     </select>
-    <select id="getCarousel" resultType="src.store.bean.Carousel">
+    <select id="getCarousel" resultType="org.store.bean.Carousel">
         SELECT * from carousel
     </select>
-    <insert id="insertCarousel" parameterType="src.store.bean.Carousel" >
+    <insert id="insertCarousel" parameterType="org.store.bean.Carousel" >
         insert into carousel values(#{carousel_id},#{imgPath},#{describes})
     </insert>
     <delete id="deletCarouselById" >

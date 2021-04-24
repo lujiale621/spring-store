@@ -2,14 +2,14 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN "
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="src.store.mapper.CollectMapper">
-    <select id="getCollectById" resultType="src.store.bean.Collect">
+<mapper namespace="org.store.mapper.CollectMapper">
+    <select id="getCollectById" resultType="org.store.bean.Collect">
         SELECT * from collect where user_id = #{user_id}
     </select>
-    <select id="getCollect" resultType="src.store.bean.Collect">
+    <select id="getCollect" resultType="org.store.bean.Collect">
         SELECT * from collect
     </select>
-    <insert id="insertCollect" parameterType="src.store.bean.Collect" >
+    <insert id="insertCollect" parameterType="org.store.bean.Collect" >
         insert into collect values(#{id},#{user_id},#{product_id},#{collect_time})
     </insert>
     <delete id="deletCollectById" >
